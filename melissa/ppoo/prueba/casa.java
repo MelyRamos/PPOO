@@ -4,5 +4,7 @@ public class casa{
 	System.out.println(" *   * ");
 	System.out.println("*     *");
 	System.out.println("*******");
+	System.out.println("*     *");
+	System.out.println("*     *");
 	}
 }
