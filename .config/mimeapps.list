@@ -1,0 +1,4 @@
+[Added Associations]
+application/x-java-archive=org.gnome.FileRoller.desktop;
+application/x-java=openjdk-11-java.desktop;
+application/vnd.debian.binary-package=org.gnome.FileRoller.desktop;snap-store_ubuntu-software-local-file.desktop;

@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+repositories/file\:_home_unsis_.eclipse_360744286_linux_gtk_x86_64_configuration_org.eclipse.osgi_180_data_listener_1925729951/description=
+repositories/file\:_home_unsis_.eclipse_360744286_linux_gtk_x86_64_configuration_org.eclipse.osgi_180_data_listener_1925729951/isSystem=true
+repositories/file\:_home_unsis_.eclipse_360744286_linux_gtk_x86_64_configuration_org.eclipse.osgi_180_data_listener_1925729951/name=dropins
+repositories/file\:_home_unsis_.eclipse_360744286_linux_gtk_x86_64_configuration_org.eclipse.osgi_180_data_listener_1925729951/provider=
+repositories/file\:_home_unsis_.eclipse_360744286_linux_gtk_x86_64_configuration_org.eclipse.osgi_180_data_listener_1925729951/type=org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository
+repositories/file\:_home_unsis_.eclipse_360744286_linux_gtk_x86_64_configuration_org.eclipse.osgi_180_data_listener_1925729951/uri=file\:/home/unsis/.eclipse/360744286_linux_gtk_x86_64/configuration/org.eclipse.osgi/180/data/listener_1925729951/
+repositories/file\:_home_unsis_.eclipse_360744286_linux_gtk_x86_64_configuration_org.eclipse.osgi_180_data_listener_1925729951/version=1
+repositories/file\:_snap_eclipse_48_.eclipseextension/description=
+repositories/file\:_snap_eclipse_48_.eclipseextension/enabled=true
+repositories/file\:_snap_eclipse_48_.eclipseextension/isSystem=true
+repositories/file\:_snap_eclipse_48_.eclipseextension/name=/snap/eclipse/48/.eclipseextension
+repositories/file\:_snap_eclipse_48_.eclipseextension/provider=
+repositories/file\:_snap_eclipse_48_.eclipseextension/type=org.eclipse.equinox.p2.extensionlocation.metadataRepository
+repositories/file\:_snap_eclipse_48_.eclipseextension/uri=file\:/snap/eclipse/48/.eclipseextension
+repositories/file\:_snap_eclipse_48_.eclipseextension/version=1

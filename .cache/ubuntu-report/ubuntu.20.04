@@ -1,0 +1,79 @@
+{
+  "Version": "20.04",
+  "OEM": {
+    "Vendor": "Dell Inc.",
+    "Product": "OptiPlex 7060",
+    "Family": "OptiPlex"
+  },
+  "BIOS": {
+    "Vendor": "Dell Inc.",
+    "Version": "1.2.17"
+  },
+  "CPU": {
+    "OpMode": "32-bit, 64-bit",
+    "CPUs": "12",
+    "Threads": "2",
+    "Cores": "6",
+    "Sockets": "1",
+    "Vendor": "GenuineIntel",
+    "Family": "6",
+    "Model": "158",
+    "Stepping": "10",
+    "Name": "Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz",
+    "Virtualization": "VT-x"
+  },
+  "Arch": "amd64",
+  "GPU": [
+    {
+      "Vendor": "8086",
+      "Model": "3e92"
+    }
+  ],
+  "RAM": 7.9,
+  "Disks": [
+    1000.2
+  ],
+  "Partitions": [
+    466.1,
+    0.7
+  ],
+  "Screens": [
+    {
+      "Size": "527mmx296mm",
+      "Resolution": "1920x1080",
+      "Frequency": "60.00"
+    }
+  ],
+  "Autologin": false,
+  "LivePatch": false,
+  "Session": {
+    "DE": "ubuntu:GNOME",
+    "Name": "ubuntu",
+    "Type": "x11"
+  },
+  "Language": "es_MX",
+  "Timezone": "America/Mexico_City",
+  "Install": {
+    "Media": "Ubuntu 20.04.1 LTS \"Focal Fossa\" - Release amd64 (20200731)",
+    "Type": "GTK",
+    "OEM": false,
+    "PartitionMethod": "resize_use_free",
+    "DownloadUpdates": false,
+    "Language": "es",
+    "Minimal": false,
+    "RestrictedAddons": true,
+    "Stages": {
+      "0": "language",
+      "42": "console_setup",
+      "44": "console_setup",
+      "48": "prepare",
+      "87": "partman",
+      "90": "partman",
+      "93": "start_install",
+      "133": "timezone",
+      "139": "usersetup",
+      "147": "user_done",
+      "635": "done"
+    }
+  }
+}

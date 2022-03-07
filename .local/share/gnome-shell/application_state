@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<application-state>
+  <context id="">
+    <application id="org.gnome.Evince.desktop" score="357" last-seen="1646437986"/>
+    <application id="org.gnome.Nautilus.desktop" score="169" last-seen="1646666964"/>
+    <application id="org.gnome.FileRoller.desktop" score="24" last-seen="1646260417"/>
+    <application id="firefox.desktop" score="6785" last-seen="1646665942"/>
+    <application id="org.gnome.Terminal.desktop" score="1853" last-seen="1646666964"/>
+    <application id="libreoffice-writer.desktop" score="799" last-seen="1646404397"/>
+    <application id="org.gnome.gedit.desktop" score="22" last-seen="1646419083"/>
+    <application id="org.gnome.Calculator.desktop" score="45" last-seen="1646664249"/>
+    <application id="gnome-control-center.desktop" score="2" last-seen="1646438786"/>
+    <application id="snap-store_ubuntu-software-local-file.desktop" score="3" last-seen="1646260204"/>
+    <application id="apport-gtk.desktop" score="0" last-seen="1646237777"/>
+    <application id="update-manager.desktop" score="0" last-seen="1646237974"/>
+    <application id="thunderbird.desktop" score="0" last-seen="1646261493"/>
+  </context>
+</application-state>

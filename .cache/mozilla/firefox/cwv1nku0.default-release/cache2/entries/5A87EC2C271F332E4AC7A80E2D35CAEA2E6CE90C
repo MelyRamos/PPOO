@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Introducción a los lenguajes de programación</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2011-03-12 08:32:47 CET"/>
+<meta name="author" content="Domingo"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../css/estilo.css" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">Introducción a los lenguajes de programación</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Bibliografía </a></li>
+<li><a href="#sec-2">2 Historia de los lenguajes de programación </a></li>
+<li><a href="#sec-3">3 Elementos de los lenguajes de programación </a></li>
+<li><a href="#sec-4">4 Abstracción </a></li>
+<li><a href="#sec-5">5 Paradigmas de programación </a>
+<ul>
+<li><a href="#sec-5_1">5.1 Paradigma funcional </a></li>
+<li><a href="#sec-5_2">5.2 Paradigma lógico </a></li>
+<li><a href="#sec-5_3">5.3 Paradigma imperativo </a></li>
+<li><a href="#sec-5_4">5.4 Paradigma orientado a objetos </a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 Compiladores e intérpretes </a>
+<ul>
+<li><a href="#sec-6_1">6.1 Compilación </a></li>
+<li><a href="#sec-6_2">6.2 Interpretación </a></li>
+<li><a href="#sec-6_3">6.3 Ejecución en máquina virtual </a></li>
+<li><a href="#sec-6_4">6.4 Enlazado de rutinas y librerías </a></li>
+<li><a href="#sec-6_5">6.5 Preprocesamiento </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Bibliografía </h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+El tema está basado en los siguientes capítulos. Os recomendamos que
+los estudieis y, si os interesa y os queda tiempo, que exploréis en
+los enlaces que hemos dejado en los apuntes para ampliar información.
+</p>
+<ul>
+<li>Introducción capítulo 1 <i>Abelson &amp; Sussman</i> (Building Abstractions with Procedures)
+</li>
+<li>Capítulo 1.2 <i>Scott</i> (The Programming Language Spectrum)
+</li>
+<li>Capítulo 1.3 <i>Scott</i> (Why Study Programming Languages)
+</li>
+<li>Capítulo 1.4 <i>Scott</i> (Compilation and Interpretation)
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Historia de los lenguajes de programación </h2>
+<div class="outline-text-2" id="text-2">
+
+
+<p>
+Al comienzo sólo existía el código máquina. Al principio de la
+historia de los computadores no existían los lenguajes de
+programación. Los computadores se programaban en el lenguaje que
+entendía la unidad de procesamiento: el código máquina.
+</p>
+<p>
+El <a href="http://en.wikipedia.org/wiki/UNIVAC_I">UNIVAC</a> fue el primer computador comercial. La primera unidad se
+vendió en 1951. Se vendieron varias decenas de instalaciones en
+organismos oficiales, ejército y empresas importantes. Se daban cursos
+de programación y apareció la figura del programador (<a href="http://www.bitsavers.org/pdf/univac/univac1/UNIVAC1_Programming_1959.pdf">manual de 1959 de programación del UNIVAC</a>). Eran más importantes las horas de
+funcionamiento del computador que las horas de trabajo del
+programador.
+</p>
+<p>
+<img src="img/univac.jpg" alt="Ordenador UNIVAC" width="600px" />
+</p>
+<p>
+(Imagen tomada de <a href="http://www.computer-history.info/Page4.dir/pages/Univac.dir/index.html">http://www.computer-history.info/Page4.dir/pages/Univac.dir/index.html</a>)
+</p>
+<p>
+Los primeros lenguajes de programación aparecieron a finales de la
+década de los 50.
+</p>
+<p>
+El FORTRAN fue el primero de ellos. Lo desarrolló un equipo de IBM
+dirigido por John W. Backus. A finales de 1953, Backus lanzó la
+propuesta de desarrollar una alternativa más productiva al lenguaje de
+programación ensamblador: escribir los programas en un lenguaje más
+expresivo y traducirlos a ensamblador (FORmula TRANslating system). El
+primer manual de FORTRAN apareció en octubre de 1956 y el primer
+compilador se terminó en abril de 1956.
+</p>
+<p>
+Cita de John Backus (tomada de la <a href="http://en.wikipedia.org/wiki/Fortran">entrada de la Wikipedia sobre FORTRAN</a>): 
+</p>
+<blockquote>
+
+<p>Much of my work has come from being lazy. I didn't like writing
+programs, and so, when I was working on the IBM 701, writing programs
+for computing missile trajectories, I started work on a programming
+system to make it easier to write programs.
+</p>
+</blockquote>
+
+
+<p>
+Desde 1954 hasta la actualidad se han documentado más de 2.500
+lenguajes de programación (consultar en <a href="http://people.ku.edu/~nkinners/LangList/Extras/langlist.htm">The Language List</a>). Entre 1952
+y 1972, la primera época de los lenguajes de programación, se
+desarrollaron alrededor de 200 lenguajes, de los que una decena fueron
+realmente siginificativos y tuvieron influencia en el desarrollo de
+lenguajes posteriores.
+</p>
+<p>
+Una lista parcial de algunos de los lenguajes de programación más
+importantes, junto con su año de creación:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">1957 FORTRAN</td><td class="left">1975 Pascal</td><td class="left">1990 Haskell</td></tr>
+<tr><td class="left">1958 ALGOL</td><td class="left">1975 Scheme</td><td class="left">1991 Python</td></tr>
+<tr><td class="left">1960 Lisp</td><td class="left">1975 Modula</td><td class="left">1993 Ruby</td></tr>
+<tr><td class="left">1960 COBOL</td><td class="left">1983 Smalltalk-80</td><td class="left">1995 Java</td></tr>
+<tr><td class="left">1962 APL</td><td class="left">1983 Objective-C</td><td class="left">1995 PHP</td></tr>
+<tr><td class="left">1962 SIMULA</td><td class="left">1983 Ada</td><td class="left">2000 C#</td></tr>
+<tr><td class="left">1964 BASIC</td><td class="left">1986 C++</td><td class="left">2003 Scala</td></tr>
+<tr><td class="left">1964 PL/I</td><td class="left">1986 Eiffel</td><td class="left">2003 Groovy</td></tr>
+<tr><td class="left">1970 Prolog</td><td class="left">1987 Perl</td><td class="left">2009 Go</td></tr>
+<tr><td class="left">1972 C</td><td class="left">1988 Tcl/Tk</td><td class="left"></td></tr>
+</tbody>
+</table>
+
+
+
+<p>
+Un diagrama de los lenguajes más importantes y sus dependencias:
+</p>
+<p>
+<img src="img/diagram-light.png" alt="Árbol de lenguajes de programación" width="854px" />
+</p>
+<p>
+(Figura tomada de <a href="http://people.mandriva.com/~prigaux/language-study/diagram.html">http://people.mandriva.com/%7Eprigaux/language-study/diagram.html</a>)
+</p>
+<p>
+Éric Lévénez ha hecho el esfuerzo de construir un árbol genealógico de
+los lenguajes de programación, que indica la fecha en la que cada
+lenguaje fue creado y la influencia que ha tenido en los lenguajes
+posteriores. Consultar el <a href="docs/HistoryProgrammingLanguagesLevenez_a4.pdf">documento PDF</a> y la <a href="http://www.levenez.com/lang/">web de Éric Lévénez</a>.
+</p>
+<p>
+<img src="img/Babel.gif"  alt="img/Babel.gif" />
+</p>
+<p>
+La Torre de Babel, representa el gran número de lenguajes de
+programación. Esta imagen se usó en la portada de <i>Programming Languages: History and Fundamentals</i>, de J. E. Sauel, 1969, Prentice
+Hall.
+</p>
+<p>
+Al principio, los lenguajes se diseñaban únicamente para poder
+ejecutar los programas eficientemente. Los ordenadores, carísimos,
+eran el recurso crítico, y los programadores eran bastante baratos. Un
+lenguaje de alto nivel tenía que ser competitivo con la ejecución de
+un código en ensamblador. A mediados de los años 60, cuando se habían
+diseñado FORTRAN, COBOL, LISP y ALGOL, John Backus (creador de
+FORTRAN) se dio cuenta que la programación estaba cambiando. Las
+máquinas eran menos caras, el coste de la programación estaba
+aumentando, aparecía la necesidad de mover o migrar los programas de
+unas estaciones a otras, y surgía la necesidad de llevar un buen
+mantenimiento de los programas resultantes. El objetivo de un lenguaje
+de alto nivel se transformó no sólo en en ejecutar los programas
+eficientemente, sino también en facilitar el desarrollo de programas
+para resolver problemas en determinadas áreas de aplicación.
+</p>
+<p>
+La tecnología de los ordenadores maduró entre 1960 y 1970 y los
+lenguajes se centraron en resolver problemas específicos de un
+dominio. Los programas científicos generalmente se implementaban en
+FORTRAN, las aplicaciones para los negocios en COBOL, las aplicaciones
+militares en JOVIAL, las de inteligencia artificial en LISP y las
+militares internas en Ada. Al igual que sucede con los lenguajes
+naturales, los lenguajes de programación a veces dejan de
+usarse. ALGOL no se utiliza desde los años 60, se reemplazó por
+Pascal, el cual se reemplazó a su vez por C++ y Java. COBOL, que se
+utilizaba para las aplicaciones mercantiles, se sustituyó también por
+C++.
+</p>
+<p>
+Los primeros lenguajes que todavía se usan tienen revisiones
+periódicas para reflejar influencias de otras áreas de
+computación. Lenguajes como Java, C++ y ML reflejan una gran
+experiencia obtenida en el diseño y uso de los cientos de lenguajes
+antiguos. Algunas de esas influencias son:
+</p>
+<ul>
+<li><i>Recursos del ordenador</i>: la evolución de los ordenadores desde los
+  años 50, junto con los modernos sistemas operativos, han
+  influenciado las características de los lenguajes de alto nivel.
+</li>
+<li><i>Aplicaciones</i>: el uso de los ordenadores se ha extendido
+  rápidamente desde las aplicaciones militares, científicas y de
+  negocios a los juegos, los ordenadores personales, internet y
+  cualquier aplicación cotidiana.
+</li>
+<li><i>Métodos de programación</i>: el diseño de los lenguajes tiene que
+  reflejar los buenos métodos para implementar programas grandes y
+  complejos.
+</li>
+<li><i>Estudios teóricos&lt;</i>: Gracias a la investigación durante más de 50
+  años en el diseño e implementación de lenguajes, se conocen los
+  puntos fuertes y débiles de las características de los mismos, por
+  lo que influye en el diseño de los nuevos lenguajes.
+</li>
+<li><i>Estandarización</i>: cada vez más existe la necesidad de que los
+  programas sean portables de unos sistemas a otros.&lt;/li&gt;
+</li>
+</ul>
+
+<p>
+La siguiente tabla (extraida del libro <i>Programming Languages. Design and Implementation</i>, de Terrence W. Pratt y Marvin V. Zelkowitz)
+muestra una pequeña lista de los lenguajes y las influencias que
+fueron importante a finales del siglo 20.
+</p>
+
+<p>
+<img src="img/lenguajes-influencias.png"  alt="img/lenguajes-influencias.png" />
+</p>
+
+<p>
+A pesar de la enorme lista de lenguajes de programación que han ido
+apareciendo, la mayor parte de los programadores sólo utilizan unos
+pocos lenguajes.  Además, los programadores a menudo trabajan en
+empresas o instalaciones donde se trabaja con un único lenguaje en
+particular, como Java, C o Ada.  Entonces, os preguntarés por qué es
+importante el estudio de diferentes lenguajes o paradigmas cuando al
+final sólo trabajaréis con unos pocos. Hay muchas razones que
+justifican su estudio, entre las cuales las más importantes son:
+</p>
+<ul>
+<li><i>Mejora el uso del lenguaje de programación</i>: si se conoce cómo
+  están implementadas las características en un lenguaje de
+  programación, se mejorará la habilidad para escribir programas
+  eficientes. Por ejemplo, si se conoce cómo crear y manipular listas
+  o cadenas en un lenguaje, por ejemplo Scheme, utilizando recursión
+  se conseguirá construir programas más eficientes.
+</li>
+<li><i>Incrementa el vocabulario de los elementos de programación</i>.
+</li>
+<li><i>Permite una mejor elección del lenguaje de programación</i>: El
+  conocimiento de diversos lenguajes de programación facilitan la
+  elección del lenguaje más adecuado para un proyecto determinado.
+</li>
+<li><i>Mejora la habilidad para desarrollar programas efectivos y   eficientes</i>: Muchos lenguajes proporcionan características que,
+  cuando se utilizan correctamente, aportan muchos beneficios a la
+  programación pero, cuando se hace un uso incorrecto, pueden
+  ocasionar un gran coste computacional.  El ejemplo típico es la
+  &lt;em>recursión&lt;/em&gt;, que permite una implementación elegante y
+  eficiente de funciones. Pero cuando no se sabe utilizar, puede
+  ocasionar un aumento exponencial del tiempo de ejecución.
+</li>
+<li><i>Facilita el aprendizaje de un nuevo lenguaje de programación</i>:
+  Cuando se conocen las estructuras, técnicas de implementación y
+  construcciones de un lenguaje, es mucho más sencillo aprender un
+  nuevo lenguaje de programación que tenga estructuras similares.
+</li>
+<li><i>Facilita el diseño de nuevos lenguajes de programación</i>: Es posible
+  que en un futuro tengais que diseñar vosotros un lenguaje que se
+  adapte a vuestras necesidades. Cuantos más lenguajes y paradigmas se
+  conozcan, más sencillo resultará el diseño y la implementación.
+</li>
+</ul>
+
+<p>
+La historia de los lenguajes de programación es &lt;em>dinámica&lt;/em&gt; y se
+encuentra en continua expansión. El gran número de lenguajes de
+programación que han aparecido desde los años 60 hasta la actualidad
+no son ni mucho menos los únicos que aparecerán en un futuro.
+</p>
+<p>
+Por ejemplo, a continuación tenemos una lista extraida de <a href="http://freshmeat.net/tags/libraries">freshmeat</a> donde
+se puede ver el número de proyectos activos etiquetados con la etiqueta
+<i>Libraries</i> ordenados por lenguaje de programación (Febrero 2011):
+</p>
+<table  border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides" alt="Principales lenguajes (Pratt)" width="528px">
+<caption></caption>
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<tbody>
+<tr><td class="left">Java (1436)</td><td class="left">J2ME (35)</td><td class="left">Groovy (12)</td></tr>
+<tr><td class="left">C (1310)</td><td class="left">Other (30)</td><td class="left">Visual Basic (11)</td></tr>
+<tr><td class="left">C++ (988)</td><td class="left">Unix Shell (30)</td><td class="left">ML (10)</td></tr>
+<tr><td class="left">PHP (857)</td><td class="left">Fortran (28)</td><td class="left">ASP (10)</td></tr>
+<tr><td class="left">Python (629)</td><td class="left">Haskell (23)</td><td class="left">Pascal (9)</td></tr>
+<tr><td class="left">Perl (404)</td><td class="left">Ada (23)</td><td class="left">HTML (8)</td></tr>
+<tr><td class="left">JavaScript (200)</td><td class="left">Other Scripting.. (19)</td><td class="left">Erlang (8)</td></tr>
+<tr><td class="left">Ruby (130)</td><td class="left">Lisp (17)</td><td class="left">Zope (8)</td></tr>
+<tr><td class="left">C# (88)</td><td class="left">Delphi (15)</td><td class="left">AJAX (8)</td></tr>
+<tr><td class="left">Tcl (86)</td><td class="left">Lua (14)</td><td class="left">XML (7)</td></tr>
+<tr><td class="left">SQL (67)</td><td class="left">Eiffel (14)</td><td class="left">.NET (7)</td></tr>
+<tr><td class="left">Objective C (41)</td><td class="left">PL/SQL (13)</td><td class="left">Qt (6)</td></tr>
+<tr><td class="left">Scheme (37)</td><td class="left">OCaml (13)</td><td class="left">Emacs Lisp (6)</td></tr>
+<tr><td class="left">Assembly (36)</td><td class="left">Common Lisp (12)</td><td class="left">bash (5)</td></tr>
+</tbody>
+</table>
+
+
+<p>
+En la siguiente web <a href="http://encyclopedia.thefreedictionary.com/Programming language timeline">Timeline of Programming Languages</a> tenemos una
+lista de los lenguajes que han aparecido cronológicamente desde los
+años 50. Es interesante ver los que han aparecido desde el año 2000 al
+2007 (21 lenguajes).
+</p>
+<p>
+La evolución de los lenguajes de programación nunca se
+detiene. Continuamente surgen nuevos lenguajes que toman
+relevancia. Algunos lenguajes de programación son el trabajo de
+personas individuales con ganas de combinar distintas ideas y
+solucionar problemas y limitaciones que detectan en los lenguajes
+conocidos.
+</p>
+<p>
+Por ejemplo, tenemos el caso de <a href="http://www.ruby-lang.org/">Ruby</a>, un lenguaje de
+programación ideado en 1993 por un joven japonés llamado Yukihiro
+Matsumoto. Creó un lenguaje multi-paradigma, interpretado y muy
+expresivo que actualmente se utiliza tanto para desarrollar
+aplicaciones web como videojuegos.
+</p>
+<p>
+<img src="img/yukihiromatsumoto.jpg"  alt="img/yukihiromatsumoto.jpg" />
+</p>
+<p>
+El propio lenguaje de programación Ruby nunca ha parado de
+evolucionar. La primera versión pública Ruby 0.95 se anunció en un
+grupo de noticias en Japón en diciembre de 1995. A continuación se
+lanzaron tres versiones más y se creó el grupo de noticias
+<i>ruby-list</i>. La versión Ruby 1.0 apareció en diciembre de 1996, la
+versión 1.3 en 1999 y la 1.8.7 en junio de 2008. La última versión que
+se ha lanzado Ruby 1.9.1 ha sido el 25 de Enero de 2009.
+</p>
+<p>
+<img src="img/oderski.jpg" alt="Yikihiro Matsumoto" width="180px" alt="Martin Odersky" width="180px" />
+</p>
+<p>
+Otro ejemplo es <a href="http://www.scala-lang.org/">Scala</a>, diseñado en 2003 por el profesor alemán Martin
+Oderski como una respuesta a los problemas de los lenguajes
+tradicionales imperativos para manejar la concurrencia. Está
+implementado sobre Java y corre en la Máquina Virtual Java.
+</p>
+<p>
+<img src="img/go.png" alt="Go" />
+</p>
+<p>
+Un último ejemplo de lenguaje muy reciente es <a href="http://golang.org/">Go</a>, el nuevo lenguaje de
+programación de Google. Una mezcla de C y Python que intenta conseguir
+un lenguaje de programación de sistemas muy eficiente, expresivo y
+también multiparadigma.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Elementos de los lenguajes de programación </h2>
+<div class="outline-text-2" id="text-3">
+
+
+<p>
+Hemos visto el gran número de lenguajes de programación que se han
+desarrollado en la historia de la informática. A pesar de la gran
+variedad de lenguajes desarrollados, hay unos elementos comunes a
+todos ellos. ¿Cuáles son? ¿Qué hace que algo pueda ser considerado un
+<i>lenguaje de programación</i>?
+</p>
+<p>
+Según la definición de la <i>Encyclopedia of Computer Science</i> <sup><a class="footref" name="fnr.1" href="#fn.1">1</a></sup> 
+(Encyclopedia of Computer Science, 4th Edition, Wiley, 2000)
+</p>
+<blockquote>
+
+<p>A programming language is a set of characters, rules for combining
+them, and rules specifying their effects when executed by a computer,
+which have the following four characteristics:
+</p>
+<ol>
+<li>It requires no knowledge of machine code on the part of the user
+</li>
+<li>It has machine independence
+</li>
+<li>Is translated into machine language
+</li>
+<li>Employs a notation that is closer to that of the specific problem being solved than is machine code
+</li>
+</ol>
+
+
+</blockquote>
+
+
+<p>
+Según Abelson y Sussman, en el libro que vamos a seguir en nuestra
+asignatura (SICP, p. 1)
+</p>
+<blockquote>
+
+<p>We are about to study the idea of a <b>computational process</b>. Computational processes are abstract beings that inhabit
+computers. As they evolve, processes manipulate other abstract things
+called <b>data</b>. The evolution of a process is directed by a pattern of
+rules called a program. [&hellip;]  The programs we use to conjure
+processes are like a sorcerer's spells. They are carefully composed
+from symbolic expressions in arcane and esoteric programming languages
+that prescribe the tasks we want our processes to perform.
+</p>
+</blockquote>
+
+
+<p>
+Y después, en la página 4, añaden otra idea fundamental:
+</p>
+<blockquote>
+
+<p>A powerful programming language is more than just a means for
+instructing a computer to perform tasks. The language also serves as a
+framework within which we organize our ideas about processes. Thus,
+when we describe a language, we should pay particular attention to the
+means that the language provides for combining simple ideas to form
+more complex ideas.
+</p>
+</blockquote>
+
+
+<p>
+Así, entre las características de un lenguaje de programación podemos remarcar las siguientes:
+</p>
+<ol>
+<li>Define un proceso que se ejecuta en un computador
+</li>
+<li>Es de alto nivel, cercano a los problemas que se quieren resolver (abstracción)
+</li>
+<li>Permite construir nuevas abstracciones que se adapten al dominio que se programa
+</li>
+</ol>
+
+<p>
+Para Abelson y Sussman, todos los lenguajes de progamación permiten
+combinar ideas simples en ideas más complejas mediante los siguientes
+tres mecanismos
+</p>
+<ul>
+<li><b>Expresiones primitivas</b> que representan las entidades más simples del lenguaje
+</li>
+<li><b>Mecanismos de combinación</b> con los que se construyen elementos compuestos a partir de elementos más simples
+</li>
+<li><b>Mecanismos de abstracción</b> con los que dar nombre a los elementos compuestos y manipularlos como unidades
+</li>
+</ul>
+
+<p>
+Cuando se habla de <i>elementos</i> en el párrafo anterior nos
+estamos refiriendo tanto a datos como a programas.
+</p>
+<p>
+Una breve lista de características comunes a todos los lenguajes de programación:
+</p>
+<ul>
+<li>Tienen una <i>sintaxis</i>: un conjunto de reglas que definen qué
+  expresiones de texto son correctas. Por ejemplo, en C todas las
+  sentencias deben terminar en ';'
+</li>
+<li>Los lenguajes de programación se ejecutan en un computador y tienen
+  una determinada <i>semántica</i> que define cuál será el resultado
+  de la ejecución de un programa.
+</li>
+<li>Definen un conjunto de <i>tipos de datos primitivos</i> que
+  representan los posibles valores que pueden devolver las expresiones
+  del lenguaje.
+</li>
+<li>Tienen mecanismos de abstracción para definir nuevos tipos de datos
+  a partir de los primitivos o nuevas funciones y procedimientos.
+</li>
+</ul>
+
+<p>
+Otra idea importante es que <i>Los lenguajes de programación son para las personas</i>.
+</p>
+<p>
+Los lenguajes de programación deben ser precisos, deben poder
+traducirse sin ambiguedad en lenguaje máquina para que sean ejecutados
+por computadores. Pero deben ser utilizados (leídos, comentados,
+probados, etc.) por personas.
+</p>
+<p>
+Es importante reflexionar sobre el campo de los lenguajes de
+programación. El estudio general de este campo nos ayuda a:
+</p>
+<ul>
+<li>aprender nuevos lenguajes
+</li>
+<li>identificar características conocidas en estos nuevos lenguajes
+</li>
+<li>conocer sus posibilidades y sus límites
+</li>
+<li>diseñar nuevas características cuando los lenguajes que usamos no las tienen
+</li>
+<li>valorar y apreciar una de las herramientas fundamentales de los informáticos
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Abstracción </h2>
+<div class="outline-text-2" id="text-4">
+
+
+<p>
+El concepto de <i>abstracción</i> es fundamental en informática. Para
+escribir un programa que preste unos servicios es fundemental
+<i>modelar</i> el dominio (sistema de información de una universidad,
+sistema de sensores de una planta química, etc.) sobre el que va a
+trabajar. Para ello es necesario definir distintas <i>abstracciones</i> que
+nos permitan tratar sus elementos y comunicarnos correctamente con los
+usuarios que van a utilizar el programa.
+</p>
+<p>
+Una abstracción agrupa un conjunto de elementos (datos y
+procedimientos) y le da un nombre. Por ejemplo, cuando hablamos del
+sistema de información de una universidad identificamos elementos
+como:
+</p>
+<ul>
+<li>Estudiantes
+</li>
+<li>Asignaturas
+</li>
+<li>Matrícula
+</li>
+<li>Expediente académico
+</li>
+<li>&hellip;
+</li>
+</ul>
+
+<p>
+Existen abstracciones propias de la computación, que se utilizan en
+múltiples dominios. Por ejemplo, abstracciones de datos como:
+</p>
+<ul>
+<li>Listas
+</li>
+<li>Árboles
+</li>
+<li>Grafos
+</li>
+<li>Tablas hash
+</li>
+</ul>
+
+<p>
+También existen abstracciones que nos permiten tratar con
+dispositivos y ordenadores externos:
+</p>
+<ul>
+<li>Fichero
+</li>
+<li>Raster gráfico
+</li>
+<li>Protocolo TCP/IP
+</li>
+</ul>
+
+<p>
+Uno de los trabajos principales de un informático es la construcción
+de abstracciones que permitan ahorrar tiempo y esfuerzo a la hora de
+tratar con la complejidad del mundo real.
+</p>
+<p>
+Tal y como dice Joel Spolsky en su blog <a href="http://www.joelonsoftware.com/articles/LeakyAbstractions.html">Joel on Software</a>
+</p>
+<blockquote>
+
+<p>TCP is what computer scientists like to call an abstraction: a
+simplification of something much more complicated that is going on
+under the covers. As it turns out, a lot of computer programming
+consists of building abstractions. What is a string library? It's a
+way to pretend that computers can manipulate strings just as easily as
+they can manipulate numbers. What is a file system? It's a way to
+pretend that a hard drive isn't really a bunch of spinning magnetic
+platters that can store bits at certain locations, but rather a
+hierarchical system of folders-within-folders containing individual
+files that in turn consist of one or more strings of bytes.
+</p>
+</blockquote>
+
+
+<p>
+Una misión fundamental de los lenguajes de programación es
+proporcionar herramientas que sirvan para construir estas
+abstracciones.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Paradigmas de programación </h2>
+<div class="outline-text-2" id="text-5">
+
+
+<p>
+Existe una enorme variedad de lenguajes de programación, no sólo en
+cuanto a su sintaxis, sino también en cuanto a su comportamiento o
+semántica.
+</p>
+<p>
+Hemos visto que cada año el número de lenguajes se incrementa, de
+forma que para los informáticos es prácticamente imposible conocer
+cada nuevo lenguaje que aparece. Pero eso no es un problema, ya que
+todos esos lenguajes tienen características comunes y se pueden
+agrupar en cuatro grandes grupos o modelos computacionales llamados
+<i>paradigmas</i>.
+</p>
+<p>
+<img src="img/paradigmas.png"  alt="img/paradigmas.png" />
+</p>
+<p>
+Imagen del libro <i>Programming Languages. Design and Implementation</i> de
+Terrence W. Pratt y Marvin V. Zelkowitz.
+</p>
+<p>
+Todos los lenguajes pertenecen a uno de esos cuatro paradigmas. De
+forma que, si se conocen las características de los paradigmas de
+programación, es muy sencillo aprender a programar en un nuevo
+lenguaje, porque tendrá las características del paradigma de
+programación al que pertenezca.
+</p>
+<p>
+El origen de la palabra <i>paradigma</i> entendida como un marco
+general en el que se desarrollan teorías científicas se encuentra en
+el trabajo de 1962 del filósofo e historiador de la ciencia Thomas
+S. Kuhn, <i>La estructura de las revoluciones científicas</i>. Esa
+palabra ha sido después adoptada por el mundo de la computación para
+definir un conjunto de ideas y principios comunes de grandes grupos de
+lenguajes de programación.
+</p>
+<p>
+La definición de la palabra <i>paradigma</i> más cercana a lo que
+se quiere decir en la expresión <i>paradigma de programación</i> es
+la siguiente:
+</p>
+<blockquote>
+
+<p>Un marco filosófico y teórico de una escuela o disciplina científica
+en el que se formulan teorías, leyes y generalizaciones y los
+experimentos realizados en soporte de ellas.
+</p>
+</blockquote>
+
+
+<p>
+Un paradigma define un conjunto de reglas, patrones y estilos de
+programación que son usados por un grupo de lenguajes de programación.
+</p>
+<p>
+Podemos distinguir cuatro grandes paradigmas de programación:
+</p>
+<ul>
+<li>Paradigma funcional
+</li>
+<li>Paradigma lógico
+</li>
+<li>Paradigma imperativo o procedural
+</li>
+<li>Paradigma orientado a objetos
+</li>
+</ul>
+
+<p>
+Una reflexión importante es que la separación entre los paradigmas y
+los lenguajes no es estricta. Existen ideas comunes a distintos
+paradigmas, así como lenguajes de programación que soportan más de un
+paradigma. Por ejemplo, el paradigma funcional y lógico comparten
+características <i>declarativas</i>, mientras que el paradigma orientado a
+objetos y procedural tienen características <i>imperativas</i>.
+</p>
+<p>
+Otros paradigmas de programación menos comunes:
+</p>
+<ul>
+<li>Paradigmas de programación paralela y concurrente
+</li>
+<li>Paradigmas basados en restricciones
+</li>
+<li>Paradigmas visuales
+</li>
+</ul>
+
+<p>
+Se puede encontrar más información sobre distintos paradigmas de
+programación en la <a href="http://en.wikipedia.org/wiki/Programming_paradigm">Wikipedia</a>.
+</p>
+<p>
+Veamos algunas características importantes de los paradigmas más
+importantes.
+</p>
+
+</div>
+
+<div id="outline-container-5_1" class="outline-3">
+<h3 id="sec-5_1"><span class="section-number-3">5.1</span> Paradigma funcional </h3>
+<div class="outline-text-3" id="text-5_1">
+
+
+<p>
+Resumen de las características principales:
+</p>
+<ul>
+<li>La computación se realiza mediante la evaluación de expresiones
+</li>
+<li>Definición de funciones
+</li>
+<li>Funciones como datos primitivos
+</li>
+<li>Valores sin efectos laterales, no existe la asignación
+</li>
+<li>Programación declarativa
+</li>
+</ul>
+
+<p>
+Lenguajes: LISP, Scheme, Haskell, Scala, Clojure.
+</p>
+<p>
+Ejemplo de código (LISP):
+</p>
+
+
+
+<pre class="example">(define (factorial x)
+   (if (= x 0)
+      1
+      (* x (factorial (- x 1)))))
+
+(factorial 8)
+40320
+(factorial 30)
+265252859812191058636308480000000
+</pre>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5_2" class="outline-3">
+<h3 id="sec-5_2"><span class="section-number-3">5.2</span> Paradigma lógico </h3>
+<div class="outline-text-3" id="text-5_2">
+
+
+<p>
+Características:
+</p>
+<ul>
+<li>Definición de reglas
+</li>
+<li>Unificación como elemento de computación
+</li>
+<li>Programación declarativa
+</li>
+</ul>
+
+<p>
+Lenguajes: Prolog, Mercury, Oz.
+</p>
+<p>
+Ejemplo de código (Prolog):
+</p>
+
+
+
+<pre class="example">padrede('juan', 'maria'). % juan es padre de maria
+padrede('pablo', 'juan'). % pablo es padre de juan
+padrede('pablo', 'marcela').
+padrede('carlos', 'debora').
+
+hijode(A,B) :- padrede(B,A).
+abuelode(A,B) :-  padrede(A,C), padrede(C,B).
+hermanode(A,B) :- padrede(C,A) , padrede(C,B), A \== B.        
+
+familiarde(A,B) :- padrede(A,B).
+familiarde(A,B) :- hijode(A,B). 
+familiarde(A,B) :- hermanode(A,B).
+
+?- hermanode('juan', 'marcela').
+yes
+?- hermanode('carlos', 'juan').
+no
+?- abuelode('pablo', 'maria').
+yes
+?- abuelode('maria', 'pablo').
+no
+</pre>
+
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-5_3" class="outline-3">
+<h3 id="sec-5_3"><span class="section-number-3">5.3</span> Paradigma imperativo </h3>
+<div class="outline-text-3" id="text-5_3">
+
+
+<p>
+Los lenguajes de programación que complen el paradigma imperativo se
+caracterizan por tener un estado implícito que es modificado mediante
+instrucciones o comandos del lenguaje. Como resultado, estos lenguajes
+tienen una noción de secuenciación de los comandos para permitir un
+control preciso y determinista del estado.
+</p>
+<p>
+Características:
+</p>
+<ul>
+<li>Definición de procedimientos
+</li>
+<li>Definición de tipos de datos
+</li>
+<li>Chequeo de tipos en tiempo de compilación
+</li>
+<li>Cambio de estado de variables
+</li>
+<li>Pasos de ejecución de un proceso
+
+
+
+
+<pre class="example">type 
+   tDimension = 1..100;
+   eMatriz(f,c: tDimension) = array [1..f,1..c] of real;
+   
+   tRango = record
+      f,c: tDimension value 1;
+   end;
+   
+   tpMatriz = ^eMatriz;
+
+
+procedure EscribirMatriz(var m: tpMatriz);
+var filas,col : integer;
+begin
+   for filas := 1 to m^.f do begin
+      for col := 1 to m^.c do
+         write(m^[filas,col]:7:2);
+      writeln(resultado);
+      writeln(resultado)
+     end;    
+end;
+</pre>
+
+
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-5_4" class="outline-3">
+<h3 id="sec-5_4"><span class="section-number-3">5.4</span> Paradigma orientado a objetos </h3>
+<div class="outline-text-3" id="text-5_4">
+
+
+<p>
+Características:
+</p>
+<ul>
+<li>Definición de clases y herencia
+</li>
+<li>Objetos como abstracción de datos y procedimientos
+</li>
+<li>Polimorfismo y chequeo de tipos en tiempo de ejecución
+</li>
+</ul>
+
+<p>
+Ejemplo (Java):
+</p>
+
+
+
+<pre class="example">public class Bicicleta {
+    public int marcha;
+    public int velocidad;
+        
+    public Bicicleta(int velocidadInicial, int marchaInicial) {
+        marcha = marchaInicial;
+        velocidad = velocidadInicial;
+    }
+        
+    public void setMarcha(int nuevoValor) {
+        marcha = nuevoValor;
+    }
+        
+    public void frenar(int decremento) {
+        velocidad -= decremento;
+    }
+        
+    public void acelerar(int incremento) {
+        velocidad += incremento;
+    }
+}
+
+public class MountainBike extends Bicicleta {
+    public int alturaSillin;
+
+    public MountainBike(int alturaInicial, int velocidadInicial, int marchaInicial) {
+        super(velocidadInicial, marchaInicial);
+        alturaSillin = alturaInicial;
+    }   
+        
+    public void setAltura(int nuevoValor) {
+        alturaSillin = nuevoValor;
+    }   
+}
+
+public class Excursion {
+   
+        public static void main(String[] args) {
+           MountainBike miBicicleta = new MoutainBike(10,10,3);
+           miBicicleta.acelerar(10);
+           miBicicleta.setMarcha(4);
+           miBicicleta.frenar(10);
+        }
+}
+</pre>
+
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Compiladores e intérpretes </h2>
+<div class="outline-text-2" id="text-6">
+
+
+<p>
+Existe una gran variedad de estrategias para conseguir que un programa
+se ejecute en un computador. Todas se basan en los "meta-programas"
+(compiladores, intérpretes, etc.) cuyos datos de entrada son el código
+fuente de otros programas.
+</p>
+<p>
+Estos meta-programas procesan otros programas y realizan múltiples
+tareas.
+</p>
+
+</div>
+
+<div id="outline-container-6_1" class="outline-3">
+<h3 id="sec-6_1"><span class="section-number-3">6.1</span> Compilación </h3>
+<div class="outline-text-3" id="text-6_1">
+
+
+<p>
+La siguiente figura muestra el proceso de generación y ejecución de un
+programa compilado.
+</p>
+<p>
+<img src="img/compilacion.png" alt="Proceso de compilación" width="400px" />
+</p>
+<p>
+Ejemplos: C, C++
+</p>
+<ul>
+<li>Diferentes momentos en la vida de un programa: tiempo de compilación
+  y tiempo de ejecución
+</li>
+<li>Mayor eficiencia
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-6_2" class="outline-3">
+<h3 id="sec-6_2"><span class="section-number-3">6.2</span> Interpretación </h3>
+<div class="outline-text-3" id="text-6_2">
+
+
+<p>
+<img src="img/interpretacion.png" alt="Proceso de interpretación" width="450px" />
+</p>
+<p>
+Ejemplos: BASIC, LISP, Scheme, Python, Ruby
+</p>
+<ul>
+<li>No hay diferencia entre el tiempo de compilación y el tiempo de ejecución
+</li>
+<li>Mayor flexibilidad: el código se puede construir y ejecutar "on the
+  fly" (funciones lambda o clousures).
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-6_3" class="outline-3">
+<h3 id="sec-6_3"><span class="section-number-3">6.3</span> Ejecución en máquina virtual </h3>
+<div class="outline-text-3" id="text-6_3">
+
+
+<p>
+<img src="img/maquina-virtual.png" alt="Ejecución en una máquina virtual" width="450px" />
+</p>
+<p>
+Ejemplos: Java, Scala
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-6_4" class="outline-3">
+<h3 id="sec-6_4"><span class="section-number-3">6.4</span> Enlazado de rutinas y librerías </h3>
+<div class="outline-text-3" id="text-6_4">
+
+
+<p>
+<img src="img/linking.png" alt="Enlazado de librerías" width="400px" />
+</p>
+
+</div>
+
+</div>
+
+<div id="outline-container-6_5" class="outline-3">
+<h3 id="sec-6_5"><span class="section-number-3">6.5</span> Preprocesamiento </h3>
+<div class="outline-text-3" id="text-6_5">
+
+
+<p>
+<img src="img/preproceso.png" alt="Prepropceso" width="200px" />
+</p>
+<p>
+El preprocesador analiza el código y sustituye macros. 
+Ejemplo: C, C++.
+Scala hace algo parecido con Java.
+</p>
+
+
+<hr/>
+<p>
+<a href="http://www.dccia.ua.es/dccia/inf/asignaturas/LPP/">Lenguajes y Paradigmas de Programación</a> <br/>
+Curso 2010-2011 <br/>
+Departamento de Ciencia de la Computación e Inteligencia Artificial <br/>
+Universidad de Alicante <br/>
+<br/>
+Sitio web realizado con <a href="http://orgmode.org/">org-mode</a> y el estilo CSS del <a href="http://orgmode.org/worg/">proyecto Worg</a>
+</p>
+
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+<p class="footnote"><sup><a class="footnum" name="fn.1" href="#fnr.1">1</a></sup> La <i>Encyclopedia of Computer Science</i> está disponible en la biblioteca
+politécnica con el identificador: POE R0/E/I/ENC/RAL
+</p>
+</div>
+</div>
+<div id="postamble">
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+</div>
+</div>
+</body>
+</html>
+����      b��b��D��b(�#   j    O^partitionKey=%28http%2Cua.es%29,:http://www.dccia.ua.es/dccia/inf/asignaturas/LPP/2010-2011/teoria/tema1 necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Date: Wed, 02 Mar 2022 15:35:01 GMT
+Server: Apache/2.2.3 (Red Hat)
+Content-Location: tema1.html
+Vary: negotiate
+TCN: choice
+Last-Modified: Mon, 02 May 2011 07:50:34 GMT
+ETag: "c52518-98fe-4745a680;4754e8c0"
+Accept-Ranges: bytes
+Content-Length: 39166
+Content-Type: text/html
+ original-response-headers Date: Wed, 02 Mar 2022 15:35:01 GMT
+Server: Apache/2.2.3 (Red Hat)
+Content-Location: tema1.html
+Vary: negotiate
+TCN: choice
+Last-Modified: Mon, 02 May 2011 07:50:34 GMT
+ETag: "c52518-98fe-4745a680;4754e8c0"
+Accept-Ranges: bytes
+Content-Length: 39166
+Connection: close
+Content-Type: text/html
+ ctid 1 uncompressed-len 0 net-response-time-onstart 1787 net-response-time-onstop 2400   ��
